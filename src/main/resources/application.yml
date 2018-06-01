@@ -1,0 +1,18 @@
+# 项目端口
+server:
+  port: 80
+
+address: C:\Users\Administrator\Desktop\zhiyuan  
+
+spring :
+ thymeleaf :
+  prefix : classpath:/templates/
+  suffix : .html 
+  mode : HTML5 
+  encoding : UTF-8
+  content-type : text/html  
+  cache : false 
+wall : 12345
+vallArea : qwqw
+kArea : 434343 
+  

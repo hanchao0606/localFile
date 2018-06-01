@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <script src="/js/jquery-2.1.0.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+        <table>
+        <tr><th> 墙 </th><th>墙面积 </th>    <th>k面积</th></tr>
+        <tr th:each="mains,mainStat : ${main}">
+        <th th:text="${mains.name}">11111</th>
+        <!-- <th th:text="${main.get('name') }">11111</th> -->
+      <!--   <th th:text="${main}">11111</th>
+        <th th:text="${main}">11111</th> -->
+        </tr>
+        </table>
+        
+        <table border='1' cellspacing='0' >
+    <tbody >
+        <tr style=";height:100px" class="firstRow">
+            <td colspan="11" width="659">
+                2018项目统计一览表
+            </td>
+        </tr>
+        <tr style=";height:35px">
+            <td colspan="3">
+                项目名称
+            </td>
+            <td width="69" >
+                初次设计
+            </td>
+            <td colspan="2" style="border-left:none">
+                变更修改
+            </td>
+            <td colspan="3" >
+                拼装错误修改
+            </td>
+            <td width="44" style="border-top: none; border-left: none;">
+                合计
+            </td>
+            <td style="border-top:none;border-left:none">
+                备注
+            </td>
+        </tr>
+        <tr style=";height:24px">
+            <td rowspan="17" width="28" style="border-top: none;">
+                辛庄安置房8#
+            </td>
+            <td width="68" style="border-top: none; border-left: none;">
+                预估面积
+            </td>
+            <td width="104" style="border-top: none; border-left: none;">
+                日期
+            </td>
+            <td style="border-top:none;border-left:none">
+                20180326
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                20180416
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                20180418
+            </td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td rowspan="16">
+                2000
+            </td>
+            <td width="104" style="border-top: none; border-left: none;">
+                墙
+            </td>
+            <td style="border-top:none;border-left:none">
+                刘志远
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                刘志远
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                刘志远
+            </td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                墙面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                816
+            </td>
+            <td style="border-top:none;border-left:none">
+                20.97
+            </td>
+            <td style="border-top:none;border-left:none">
+                29.11
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.8
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.94
+            </td>
+            <td style="border-top:none;border-left:none">
+                设计
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                K板面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                7
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.8
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                墙背楞长度
+            </td>
+            <td style="border-top:none;border-left:none">
+                1391.56
+            </td>
+            <td style="border-top:none;border-left:none">
+                357.27
+            </td>
+            <td style="border-top:none;border-left:none">
+                190.29
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                梁
+            </td>
+            <td style="border-top:none;border-left:none">
+                王娜
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                王娜
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                王娜
+            </td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                梁面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                217.78
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.34
+            </td>
+            <td style="border-top:none;border-left:none">
+                4.15
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.4
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                设计
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                梁背楞
+            </td>
+            <td style="border-top:none;border-left:none">
+                73.8
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                顶
+            </td>
+            <td style="border-top:none;border-left:none">
+                王兴宇
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                王兴宇
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black">
+                /
+            </td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                顶板面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                546.99
+            </td>
+            <td style="border-top:none;border-left:none">
+                7.57
+            </td>
+            <td style="border-top:none;border-left:none">
+                10.2
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                吊
+            </td>
+            <td style="border-top:none;border-left:none">
+                王兴宇
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none"></td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                吊模面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                2.16
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                楼梯
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                /
+            </td>
+            <td colspan="2" style="border-right-width: 1px;border-right-color: black;border-left: none">
+                /
+            </td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                楼梯面积
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                楼梯背楞
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none">
+                /
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                模板面积合计
+            </td>
+            <td style="border-top:none;border-left:none">
+                1589.93
+            </td>
+            <td style="border-top:none;border-left:none">
+                29.68
+            </td>
+            <td style="border-top:none;border-left:none">
+                43.46
+            </td>
+            <td style="border-top:none;border-left:none">
+                1.2
+            </td>
+            <td style="border-top:none;border-left:none">
+                0.94
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none">
+                1576
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="104" style="border-top: none; border-left: none;">
+                背楞长度合计
+            </td>
+            <td style="border-top:none;border-left:none">
+                1465.36
+            </td>
+            <td style="border-top:none;border-left:none">
+                357.27
+            </td>
+            <td style="border-top:none;border-left:none">
+                190.29
+            </td>
+            <td style="border-top:none;border-left:none">
+                0
+            </td>
+            <td style="border-top:none;border-left:none">
+                0
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-top:none;border-left:none">
+                1632
+            </td>
+            <td style="border-top:none;border-left:none"></td>
+        </tr>
+        <tr style=";height:24px">
+            <td width="28"></td>
+            <td style="border-left:none"></td>
+            <td width="104" style="border-left: none;">
+                状态
+            </td>
+            <td style="border-left:none">
+                完成
+            </td>
+            <td style="border-left:none">
+                完成
+            </td>
+            <td style="border-left:none">
+                已发送
+            </td>
+            <td style="border-left:none">
+                完成
+            </td>
+            <td style="border-left:none">
+                未发送
+            </td>
+            <td style="border-left:none"></td>
+            <td style="border-top:none;border-left:none"></td>
+            <td style="border-left:none"></td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <br/>
+</p>
+</body>
+<script>
+/*    $(function () {
+		 $.ajax({
+		    	url:'chaxun',
+		        data:'',//$('#Form').serialize(), 你的formid	
+		    	dateType:'json',
+		    	//timeOut:20000,
+		    	success:function(data){
+		    		console.table(data.main)
+		    		var da=JSON.stringify(data.main[0]);
+		    		da.name;
+		    		
+				} 
+		})
+	
+});  */
+   /* 
+	var myChart = echarts.init(document.getElementById('main1'));
+	var option = {
+			title : {
+				text : "业务成交量统计",
+				x : 'center', //字体居中显示，默认靠左
+			},
+			tooltip : {
+				show : true,
+			},
+			
+			  grid: {
+			        left: '3%',
+			        right: '4%',
+			        bottom: '3%',
+			        containLabel: true
+			    },
+			xAxis : {
+				type : 'category',
+				boundaryGap : false,
+				data : ['未支付','已支付未分配','已分配未接车','接车审验中','审验完成车辆送回','代审结束'],
+			},
+			
+			dataZoom:{
+				show:false,
+				shart:10,
+				end:1000,
+			},
+			yAxis : {
+				type : 'value',
+			},
+			series : [ {
+				name : "业务成交量",
+				type : "line",
+				data : data.zong,
+				
+			} ]
+		};
+	myChart.setOption(option); */
+</script>
+</html>
