@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 public class Firstdesign {
-	private String date;
+	private String date;//日期
 	private String wall; //墙
 	private String wallArea;//墙面积
 	private String kPlateArea;//K板面积
@@ -18,6 +18,21 @@ public class Firstdesign {
 	private String stairsBack;//楼梯背楞
 	private String TemplateAreaCombined;//模板面积合计
 	private String BackLength;//背楞长度合计
+	private String state;//状态（1、待做，2，完成，3，已发送）
+	private String forecastArea ;//预估面积
+	
+	public String getForecastArea() {
+		return forecastArea;
+	}
+	public void setForecastArea(String forecastArea) {
+		this.forecastArea = forecastArea;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public String getWall() {
 		return wall;
 	}

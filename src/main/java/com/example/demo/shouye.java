@@ -33,7 +33,10 @@ public class shouye {
 
 	@Value("${address}")
 	private String dizhi;
-
+	
+	@Value("${daizuo}")
+    private String daizuo;
+	
 	@RequestMapping("/shouye")
 	public String test(Model model ){
 		return "shouye.html";
@@ -44,8 +47,8 @@ public class shouye {
 	    public List<Object> populateSeedStarters(Model model) {
 
 
-			File fileDaiZuo = new File(dizhi+"\\daizuo");//待做文件
-			File fileDaiZuoDate = new File(dizhi+"\\daizuo\\date");//待做文件数据
+			File fileDaiZuo = new File(dizhi+"\\"+daizuo);//待做文件
+			File fileDaiZuoDate = new File(dizhi+"\\"+daizuo+"\\date");//待做文件数据
 			/////////////////////////////////判断是否相等，不相等说明有新的文件加入///////////////////////////////////////////
 			//查找新文件件名字
 			Map<String,String> fileDaiZuoMap=new HashMap<>();//创建两个map用来查找两个待做文集加里面多余数据文件夹里面的文件名字
@@ -67,7 +70,7 @@ public class shouye {
 			//////////////////////////新创建的文件创建数据json文件/////////////////////////////////
 			for(String mm:fileDaiZuoMap.keySet()){
 				System.out.println("    =====  :"+mm);
-				String path=dizhi+"\\daizuo\\date\\"+mm+"\\"+mm+"date.json";//文件全路径
+				String path=dizhi+"\\"+daizuo+"\\date\\"+mm+"\\"+mm+"date.json";//文件全路径
 				File   fname = new File  (path);//创建file
 				try {
 					File dir = new File(fname.getParent());  
@@ -110,7 +113,6 @@ public class shouye {
 
 	//新建数据的模板
 	public  String template(String name,String address)  {
-
 		JSONObject jo= new JSONObject();
 		Map<String, Object> map = new HashMap<String, Object>();  
 		JSONArray array = new JSONArray(); 
@@ -133,6 +135,8 @@ public class shouye {
 			map.put("stairsBack", "");//楼梯背楞
 			map.put("TemplateAreaCombined", "");//模板面积合计
 			map.put("BackLength", "");//背楞长度合计
+			map.put("state","1");//状态
+			map.put("forecastArea", "");//预估面积
 			jo.put("info", map);
 			jo.put("add", array);
 		} catch (JSONException e) {
